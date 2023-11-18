@@ -1,0 +1,49 @@
+/* Define grid areas */
+.header{
+    grid-area: header;
+    background-color: aqua;
+}
+.nav{
+    grid-area: nav;
+    background-color: antiquewhite;
+}
+.main{
+    grid-area: main;
+    background-color: antiquewhite;
+
+}
+.aside{
+    grid-area: aside;
+    background-color: antiquewhite;
+}
+.ad{
+    grid-area: ad;
+    background-color: antiquewhite;
+}
+.footer{
+    grid-area: footer;
+    background-color: antiquewhite;
+}
+.grid-container{
+    display: grid;
+ gap: 20px;   
+    grid-template-areas:
+     "header header header header"
+     "nav main main aside"
+     "nav main main ad"
+     "footer footer footer footer"
+     ;
+}
+@media screen and (max-width :576px) {
+    .grid-container{
+    grid-template-columns: 1fr;  
+    grid-template-areas:
+     "header "
+     "nav"
+      "main" 
+      "aside"
+     "ad"
+     "footer"
+     ;
+}
+}
